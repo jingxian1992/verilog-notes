@@ -1,0 +1,21 @@
+方法一：与逻辑实现
+
+always@(posedge sys_clk or negedge sys_rst_n)
+	if (sys_rst_n == 1'b0)
+		podge <= 1'b0;
+	else if (data && (~data_reg))
+		podge <= 1'b1;
+	else
+		podge <= 1'b0;
+
+		
+
+方法二：或逻辑实现
+
+always@(posedge sys_clk or negedge sys_rst_n)
+	if (sys_rst_n == 1'b0)
+		podge <= 1'b0;
+	else if ((~data) || data_reg)
+		podge <= 1'b0;
+	else
+		podge <= 1'b1;

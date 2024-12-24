@@ -1,0 +1,2 @@
+依次点选【Tools】，【Settings】，【Text Editor】，【Fonts and Colors】，
+在最终的对话框中，就可以设置字体了。
